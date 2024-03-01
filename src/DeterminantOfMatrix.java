@@ -1,19 +1,17 @@
 public class DeterminantOfMatrix {
-    static int n; // Number of rows
-    static int m; // Number of columns
+    static int n;
 
     public static void main(String[] args) {
-        n = Tools.getInt("Rows of matrix: "); // Input for number of rows
-        m = Tools.getInt("Columns of matrix: "); // Input for number of columns
+        n = Tools.getInt("Columns/Rows of square matrix: "); // Input for number of columns
         int[][] matrixA = getIntArray(); // Get the matrix from user input
         System.out.println("Determinant of matrix is " + determinant(matrixA)); // Print determinant of the matrix
     }
 
     // Method to get matrix from user input
     private static int[][] getIntArray() {
-        int[][] matrix = new int[n][m]; // Initialize matrix with given dimensions
+        int[][] matrix = new int[n][n]; // Initialize matrix with given dimensions
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+            for (int j = 0; j < n; j++) {
                 matrix[i][j] = Tools.getInt("element of " + i + "x" + j + " :"); // Input for each element of matrix
             }
         }
